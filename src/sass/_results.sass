@@ -1,0 +1,120 @@
+=result-list-icon($iconUrl)
+  content: ''
+  display: inline-block
+  width: 61px
+  height: 61px
+  background: url($iconUrl) no-repeat center
+  margin-right: 38px
+#results-background
+  position: absolute
+  top: 50%
+  left: 0
+  transform: translateY(-50%)
+  z-index: -1
+  &__rectangle-1
+    animation: rectangleMove3 1.5s infinite
+    animation-direction: alternate-reverse
+  &__rectangle-2
+    animation: rectangleMove4 2s infinite
+    animation-direction: alternate-reverse
+.results
+  height: 968px
+  margin-top: 34px
+  position: relative
+  margin-bottom: 85px
+  &__body
+    margin-left: 95px
+    width: 1180px
+    > .section-header_white
+      display: inline-block
+      margin-top: 188px
+      margin-bottom: 42px
+.results-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  &__item
+    display: flex
+    flex-wrap: wrap
+    width: 565px
+    height: 278px
+    background: #FFFFFF
+    box-shadow: 0px 10px 30px rgba(47, 55, 237, 0.1)
+    border-radius: 10px
+    margin-right: 33px
+    margin-bottom: 40px
+    padding: 55px 50px
+    &:nth-child(1)
+      order: 1
+      animation: slow-bounce3 40s infinite
+      animation-direction: alternate-reverse
+      animation-delay: 0.2s
+      &::before
+        +result-list-icon("../images/icons/idea.png")
+    &:nth-child(2)
+      order: 3
+      margin-bottom: 0
+      animation: slow-bounce3 40s infinite
+      animation-direction: alternate-reverse
+      animation-delay: 0.1s
+      &::before
+        +result-list-icon("../images/icons/tools.png")
+    &:nth-child(3)
+      order: 2
+      margin-right: 0
+      animation: slow-bounce2 40s infinite
+      animation-direction: alternate-reverse
+      animation-delay: 0.4s
+      &::before
+        +result-list-icon("../images/icons/process.png")
+    &:nth-child(4)
+      order: 4
+      margin-right: 0
+      margin-bottom: 0
+      animation: slow-bounce2 40s infinite
+      animation-direction: alternate-reverse
+      animation-delay: 0.3s
+      &::before
+        +result-list-icon("../images/icons/cases.png")
+  &__item-name
+    font-family: 'Montserrat-SemiBold', sans-serif
+    font-size: 1.6rem
+    line-height: 2.297rem
+    letter-spacing: 5%
+    font-weight: 600
+    color: rgba(47, 128, 237, 1)
+    text-transform: uppercase
+    width: 366px
+    height: 60px
+  &__item-description
+    font-size: 1.6rem
+    line-height: 2.297rem
+    color: rgba(99, 99, 99, 1)
+    width: 366px
+    height: 115px
+    margin-left: 100px
+    margin-top: 9px
+@keyframes rectangleMove3
+  from
+    transform: perspective(800px) scale(1) translateX(0px) translateY(0)
+  to
+    transform: perspective(800px) scale(1.01) translateX(15px) translateY(10px)
+@keyframes rectangleMove4
+  from
+    transform: perspective(800px) scale(1) translateX(0px) translateY(0)
+  to
+    transform: perspective(800px) scale(1.01) translateX(15px) translateY(-10px)
+@keyframes slow-bounce2
+  0%, 100%
+    transform: translateY(0)
+  10%, 30%, 50%, 70%, 90%
+    transform: translateY(-8px)
+  20%, 40%, 60%, 80%
+    transform: translateY(8px)
+@keyframes slow-bounce3
+  0%, 100%
+    transform: translateY(0)
+  10%, 30%, 50%, 70%, 90%
+    transform: translateY(-16px)
+  20%, 40%, 60%, 80%
+    transform: translateY(16px)

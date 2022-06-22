@@ -1,0 +1,37 @@
+.main-nav
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+.city-list
+  display: flex
+  width: 400px
+  margin-right: 80px
+  flex-wrap: wrap
+  justify-content: flex-start
+  &__item
+    padding: 40px 0 20px
+    margin-right: 25px
+    text-transform: uppercase
+  &__link
+    color: rgba(0, 0, 0, 1)
+    &_active
+      color: rgba(47, 128, 237, 1)
+      font-family: 'Montserrat-Bold', sans-serif
+      font-weight: 700
+.main-navigation
+  display: flex
+  width: 520px
+  flex-wrap: wrap
+  margin-right: 20px
+  justify-content: flex-start
+  &__item
+    padding: 40px 0 20px
+    margin-right: 40px
+    &:last-child
+      margin-right: 0
+  &__link
+    color: rgba(255, 255, 255, 1)
+    &_active
+      color: rgba(255, 255, 255, 1)
+      font-family: 'Montserrat-Bold', sans-serif
+      font-weight: 700

@@ -1,0 +1,55 @@
+.footer
+  background: rgba(47, 128, 237, 1)
+  padding-bottom: 42px
+.footer-nav
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 128px
+  > .button
+    margin: 0
+  &__body
+    display: flex
+    flex-wrap: wrap
+    width: 560px
+  &__item
+    margin-right: 26px
+    &:last-child
+      margin-right: 0
+  &__link
+    color: rgba(255, 255, 255, 1)
+    font-size: 1.4rem
+    line-height: 1.675rem
+    &_active
+      font-family: 'Montserrat-Bold', sans-serif
+      font-weight: 700
+      font-size: 1.4rem
+      line-height: 1.675rem
+      color: rgba(255, 255, 255, 1)
+.footer-copyright
+  background: rgba(24, 95, 191, 1)
+  &__body
+    display: flex
+    justify-content: space-between
+    padding-top: 29px
+    padding-bottom: 31px
+  &__text
+    font-size: 1.4rem
+    line-height: 1.675rem
+    color: rgba(255, 255, 255, 0.77)
+    width: 225px
+  &__link-list
+    display: flex
+    justify-content: flex-end
+    width: 410px
+  &__link-list-item
+    margin-right: 49px
+    &:last-child
+      margin-right: 0
+  &__link-list-link
+    font-size: 1.4rem
+    line-height: 1.675rem
+    color: rgba(255, 255, 255, 0.7)
+    transition: color 0.15s linear
+    &:hover
+      color: #FFF

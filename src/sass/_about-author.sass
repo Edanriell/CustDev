@@ -1,0 +1,100 @@
+=fact-icon($imageUrl)
+  content: ''
+  width: 61px
+  height: 61px
+  margin-bottom: 33px
+  background: no-repeat url($imageUrl) center
+.about-author
+  height: 983px
+  > .section-header
+    margin-bottom: 77px
+.author-introduction
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-bottom: 81px
+  &__video-box
+    width: 727px
+    height: 392px
+    background: #C4C4C4
+    border-radius: 10px
+    position: relative
+  &__playBtn
+    position: absolute
+    width: 70px
+    height: 70px
+    border-radius: 50%
+    background: rgba(47, 128, 237, 0.5)
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    transition: all 0.3s ease
+    border: none
+    cursor: pointer
+    &:hover
+      background: rgba(47, 128, 237, 1)
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background: url("../images/icons/play2.svg") no-repeat center
+      width: 25px
+      height: 38px
+  &__text-column
+    width: 351px
+    height: 212px
+    background: #FFFFFF
+    box-shadow: 0px 30px 100px rgba(47, 55, 237, 0.1)
+    border-radius: 10px
+    padding: 66px 31px 32px 63px
+  &__author-name
+    font-family: 'Montserrat-Bold', sans-serif
+    font-weight: 700
+    font-size: 2.4rem
+    line-height: 4.388rem
+    color: rgba(47, 128, 237, 1)
+  &__author-profession
+    font-family: 'Gotham-Pro', sans-serif
+    font-size: 1.4rem
+    line-height: 2.461rem
+    color: rgba(99, 99, 99, 1)
+.author-skills-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  &__item
+    height: 285px
+    display: flex
+    flex-direction: column
+    &:nth-child(1)
+      width: 247px
+    &:nth-child(2)
+      width: 246px
+    &:nth-child(3)
+      width: 221px
+    &:nth-child(4)
+      width: 225px
+    &:nth-child(1)::before
+      +fact-icon("../images/icons/exp.svg")
+    &:nth-child(2)::before
+      +fact-icon("../images/icons/students.svg")
+    &:nth-child(3)::before
+      +fact-icon("../images/icons/chat.svg")
+    &:nth-child(4)::before
+      +fact-icon("../images/icons/mark.svg")
+  &__item-name
+    font-family: 'Montserrat-SemiBold', sans-serif
+    font-weight: 600
+    font-size: 1.6rem
+    line-height: 2.297rem
+    letter-spacing: 5%
+    color: rgba(47, 128, 237, 1)
+    text-transform: uppercase
+    margin-bottom: 9px
+    width: 180px
+  &__item-description
+    font-size: 1.6rem
+    line-height: 2.297rem
+    color: rgba(99, 99, 99, 1)

@@ -1,0 +1,91 @@
+.promo
+  height: 657px
+  position: relative
+  margin-bottom: 92px
+  &__body
+    display: flex
+    height: 780px
+.text-column
+  order: 2
+  position: absolute
+  right: 166px
+  top: 88px
+  &__text_medium
+    font-family: 'Montserrat-Medium', sans-serif
+    font-weight: 500
+    font-size: 1.6rem
+    line-height: 1.991rem
+    letter-spacing: 5%
+    text-transform: uppercase
+    color: rgba(255, 255, 255, 1)
+    margin-bottom: 18px
+  &__text_bold
+    font-family: 'Montserrat-Bold', sans-serif
+    font-weight: 700
+    font-size: 4rem
+    line-height: 4.976rem
+    color: rgba(255, 255, 255, 1)
+    width: 540px
+    margin-bottom: 21px
+  &__text_regular
+    color: rgba(255, 255, 255, 1)
+    font-size: 1.8rem
+    line-height: 2.239rem
+    margin-bottom: 42px
+.rating
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: radial-gradient(68.31% 68.31% at 50% 50%, #F9FBFF 0%, #CADEF9 100%), #FFFFFF
+  box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3)
+  border-radius: 50%
+  position: absolute
+  right: 1025px
+  top: 370px
+  order: 1
+  width: 231px
+  height: 231px
+  animation: slow-bounce 40s infinite
+  animation-direction: alternate
+  transform-origin: bottom
+  &__text_regular
+    text-align: center
+    color: rgba(47, 128, 237, 1)
+    line-height: 2.144rem
+    width: 84px
+    height: 12px
+  &__text_bold
+    text-align: center
+    color: rgba(47, 128, 237, 1)
+    font-family: 'Montserrat-Bold', sans-serif
+    font-size: 3.4rem
+    line-height: 5.206rem
+    font-weight: 700
+    margin-top: 10px
+    width: 153px
+    height: 49px
+  &__text_bold-small
+    text-align: center
+    color: rgba(47, 128, 237, 1)
+    font-family: 'Montserrat-Bold', sans-serif
+    line-height: 2.01rem
+    font-weight: 700
+  &__text_regular-wide
+    text-align: center
+    color: rgba(47, 128, 237, 1)
+    line-height: 2.01rem
+  &__text_regular-narrow
+    display: inline-block
+    font-family: 'Gotham-Pro', sans-serif
+    font-size: 1.2rem
+    line-height: 1.723rem
+    color: rgba(47, 128, 237, 1)
+    margin-top: 12px
+@keyframes slow-bounce
+  0%, 100%
+    transform: translateY(0)
+  10%, 30%, 50%, 70%, 90%
+    transform: translateY(-10px)
+  20%, 40%, 60%, 80%
+    transform: translateY(10px)

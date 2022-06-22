@@ -1,0 +1,58 @@
+=element-position($position, $right, $top)
+  position: $position
+  right: $right
+  top: $top
+.target-audience
+  position: relative
+  background: no-repeat url("../images/knowledge-section-bg.svg") right 24px
+  margin-bottom: 130px
+  &__body
+    height: 590px
+    > .section-header
+      +element-position(absolute, 614px, 116px)
+  &::before
+    content: ''
+    +element-position(absolute, 28px, -26px)
+    display: block
+    background: red
+    width: 231px
+    height: 231px
+    background: radial-gradient(68.31% 68.31% at 50% 50%, #FFFFFF 0%, #CADEF9 100%), #FFFFFF
+    box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3)
+    filter: blur(20px)
+    border-radius: 50%
+    animation: light-ball-bounce 50s infinite
+    animation-direction: alternate
+    transform-origin: bottom
+.target-audience-list
+  +element-position(absolute, 472px, 251px)
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  align-items: center
+  &__item
+    height: 200px
+    margin-left: 75px
+    &:first-child
+      margin: 0
+  &__item-name
+    text-align: left
+    color: rgba(47, 128, 237, 1)
+    font-family: 'Montserrat-SemiBold', sans-serif
+    font-weight: 600
+    line-height: 2.01rem
+    letter-spacing: 5%
+    width: 190px
+    margin-bottom: 9px
+  &__item-description
+    text-align: left
+    line-height: 2.01rem
+    color: rgba(99, 99, 99, 1)
+    width: 230px
+@keyframes light-ball-bounce
+  0%, 100%
+    transform: translateY(0)
+  10%, 30%, 50%, 70%, 90%
+    transform: translateY(-40px)
+  20%, 40%, 60%, 80%
+    transform: translateY(320px)

@@ -1,0 +1,134 @@
+.pricing
+  margin-top: 59px
+  padding-top: 247px
+  padding-bottom: 191px
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    width: 231px
+    height: 231px
+    background: radial-gradient(68.31% 68.31% at 50% 50%, #FFFFFF 0%, #CADEF9 100%), #FFFFFF
+    box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3)
+    filter: blur(20px)
+    border-radius: 50%
+    animation: light-ball-animation 15s infinite
+    animation-direction: alternate
+    transform-origin: center
+    z-index: -2
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 141px
+    height: 141px
+    background: radial-gradient(68.31% 68.31% at 50% 50%, #6AAAFF 0%, #2F80ED 100%), #FFFFFF
+    box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3)
+    filter: blur(20px)
+    border-radius: 50%
+    animation: light-ball-animation2 15s infinite
+    animation-direction: alternate
+    transform-origin: center
+    z-index: -2
+  &__body
+    > .section-header
+      margin-bottom: 65px
+      text-align: center
+.price-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  margin-right: -25px
+  &__item
+    position: relative
+    margin-right: 25px
+    margin-bottom: 25px
+  &__item-body
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 271px
+    height: 293px
+    background: #FFFFFF
+    box-shadow: 0px 20px 50px rgba(47, 55, 237, 0.12)
+    border-radius: 10px
+    padding-top: 71px
+    &_special::before
+      position: absolute
+      background: #2F80ED
+      border-radius: 300px
+      width: 90px
+      height: 90px
+      top: -45px
+      right: -24px
+      content: 'выгодно'
+      font-family: 'Montserrat-Bold', sans-serif
+      font-weight: 700
+      font-size: 1.2rem
+      line-height: 9rem
+      color: rgba(255, 255, 255, 1)
+      text-align: center
+  &__item-price
+    font-family: 'Montserrat-Bold', sans-serif
+    font-weight: 700
+    font-size: 2.5rem
+    line-height: 3.962rem
+    color: rgba(47, 128, 237, 1)
+    text-align: center
+    margin-bottom: 12px
+  &__employees-count
+    font-family: 'Montserrat-SemiBold', sans-serif
+    font-weight: 600
+    font-size: 1.6rem
+    line-height: 2.536rem
+    color: rgba(47, 128, 237, 1)
+    text-align: center
+    margin-bottom: 32px
+#pricing-section-background
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -23%)
+  z-index: -1
+  animation: pricing-section-background-animation 10s infinite
+  animation-direction: alternate
+  transform-origin: center
+  &__rectangle
+    z-index: -1  
+@keyframes light-ball-animation
+  0%
+    transform: translateY(0) translateX(0)
+  100%
+    transform: translateY(620px) translateX(-150px)
+  // 50%
+  //   transform: translateY(140px) translateX(-1200px)
+  // 75%
+  //   transform: translateY(600px) translateX(-760px)
+  // 100%
+  //   transform: translateY(60px) translateX(-1800px)
+@keyframes light-ball-animation2
+  0%
+    transform: translateY(0) translateX(0)
+  100%
+    transform: translateY(-540px) translateX(240px)
+  // 50%
+  //   transform: translateY(-10px) translateX(700px)
+  // 75%
+  //   transform: translateY(-660px) translateX(1500px)
+  // 100%
+  //   transform: translateY(0) translateX(1960px)
+@keyframes pricing-section-background-animation
+  0%
+    transform: translateY(-23%) translateX(-50%) skew(0, 0) scale(1)
+  25%
+    transform: translateY(-23%) translateX(-50%) skew(5deg, 5deg) scale(1.1)
+  50%
+    transform: translateY(-23%) translateX(-50%) skew(-5deg, -5deg) scale(1.16)
+  75%
+    transform: translateY(-23%) translateX(-50%) skew(10deg, 10deg) scale(1.14)
+  100%
+    transform: translateY(-23%) translateX(-50%) skew(-2deg, -2deg) scale(1)
+

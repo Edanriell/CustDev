@@ -1,0 +1,203 @@
+@import ~normalize.css
+@import 'header'
+@import 'footer'
+@import 'main-section'
+@import './fonts/montserrat'
+@import './fonts/gothamproregular'
+@import 'modal'
+@import 'gallery'
+=flex($justify, $align, $direction)
+  display: flex
+  justify-content: $justify
+  align-items: $align
+  flex-direction: $direction
+=section-text-position($position, $right)
+  position: $position
+  right: $right
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+html
+  font-size: 62.5%
+  scroll-behavior: smooth
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin: 0
+  padding: 0
+ul
+  list-style: none
+a
+  text-decoration: none
+body
+  min-width: 1200px
+  font-size: 1.4rem
+  font-style: normal
+  font-weight: 400
+  line-height: 1.675rem
+  color: rgba(99, 99, 99, 1)
+  font-family: 'Montserrat-Regular', "Arial", sans-serif
+.container
+  width: 1180px
+  margin: 0 auto
+  padding-left: 10px
+  padding-right: 10px
+.container-large
+  width: 1440px
+  margin: 0 auto
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+.button
+  border: none
+  cursor: pointer
+  &_white
+    background: #FFFFFF
+    border-radius: 50px
+    width: 160px
+    height: 42px
+    color: rgba(47, 128, 237, 1)
+    margin-top: 28px
+    margin-left: auto
+    transition: all 0.10s ease-in-out
+    &:hover
+      background: #1757ac
+      color: #FFF
+  &_green
+    position: relative
+    background: rgba(100, 226, 205, 1)
+    border-radius: 50px
+    color: rgba(255, 255, 255, 1)
+    text-transform: uppercase
+    width: 192px
+    height: 50px
+    font-family: 'Montserrat-Bold', sans-serif
+    font-weight: 700
+    font-size: 1.4rem
+    line-height: 1.742rem
+    text-transform: uppercase
+    margin-left: 15.5px
+    &::before
+      display: block
+      position: absolute
+      content: ''
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 192px
+      height: 50px
+      background: rgba(100, 226, 205, 0.5)
+      border-radius: 50px
+      z-index: -1
+      transition: all 0.15s linear
+    &:hover::before
+      width: 223px
+      height: 77px
+  &_green-small
+    position: relative
+    display: inline-block
+    width: 192px
+    height: 50px
+    background: #52D1BC
+    border-radius: 50px
+    color: rgba(255, 255, 255, 1)
+    text-transform: uppercase
+    font-family: 'Montserrat-Bold', sans-serif
+    font-weight: 700
+    font-size: 1.4rem
+    line-height: 2.219rem
+    text-align: center
+    padding-top: 15px
+    padding-bottom: 23px
+    transition: all 0.15s linear
+    &:hover
+      background: #41a090
+.section-header
+  font-family: 'Montserrat-Bold', sans-serif
+  font-weight: 700
+  font-size: 3rem
+  line-height: 3.732rem
+  color: rgba(0, 0, 0, 1)
+  &_white
+    @extend .section-header
+    color: #FFF
+.link
+  font-family: 'Montserrat-SemiBold', sans-serif
+  font-weight: 600
+  line-height: 2.01rem
+  color: rgba(47, 128, 237, 1)
+  text-transform: uppercase
+  padding-bottom: 5px
+  border-bottom: 1px dashed #2F80ED
+.pageup
+  opacity: 0
+  width: 60px
+  height: 60px
+  position: fixed
+  bottom: 16%
+  right: 8%
+  z-index: 2
+  cursor: pointer
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset
+  background: rgba(24, 95, 191, 1) url("../images/icons/arrow-up.svg") no-repeat center
+  background-size: 30px 30px
+  transition: all 0.25s ease-in-out
+  border-radius: 10px
+  &:hover
+    background: #134f9e url("../images/icons/arrow-up.svg") no-repeat center
+    background-size: 30px 30px
+.button-fade-in
+  -webkit-animation: button-fade-in 0.25s ease-in-out both
+  animation: button-fade-in 0.25s ease-in-out both
+@-webkit-keyframes button-fade-in 
+  0% 
+    -webkit-transform: translateZ(-80px)
+    transform: translateZ(-80px)
+    opacity: 0
+  100% 
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    opacity: 1
+@keyframes button-fade-in 
+  0% 
+    -webkit-transform: translateZ(-80px)
+    transform: translateZ(-80px)
+    opacity: 0
+  100% 
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    opacity: 1
+.button-fade-out
+  -webkit-animation: button-fade-out 0.25s ease-in-out both
+  animation: button-fade-out 0.25s ease-in-out both
+@-webkit-keyframes button-fade-out 
+  0% 
+    -webkit-transform: perspective(600px) translateZ(0)
+    transform: perspective(600px) translateZ(0)
+    opacity: 1
+  100% 
+    -webkit-transform: perspective(600px) translateZ(-80px)
+    transform: perspective(600px)translateZ(-80px)
+    opacity: 0
+@keyframes button-fade-out 
+  0% 
+    -webkit-transform: perspective(600px) translateZ(0)
+    transform: perspective(600px) translateZ(0)
+    opacity: 1
+  100% 
+    -webkit-transform: perspective(600px) translateZ(-80px)
+    transform: perspective(600px) translateZ(-80px)
+    opacity: 0
+  

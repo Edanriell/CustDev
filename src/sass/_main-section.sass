@@ -1,0 +1,37 @@
+@import 'promo'
+@import 'target-audience'
+@import 'about-course'
+@import 'results'
+@import 'about-author'
+@import 'image-gallery'
+@import 'pricing'
+
+#promo-background
+  position: absolute
+  z-index: -1
+  top: 0
+  right: 0
+  
+#promo-background-wrapper
+  position: absolute
+  top: 0
+  right: 0
+  z-index: -2
+  &__rectangle-1
+    animation: rectangleMove 1.5s infinite
+    animation-direction: alternate-reverse
+  &__rectangle-2
+    animation: rectangleMove2 1.5s infinite
+    animation-direction: alternate
+    animation-delay: 0.8s
+
+@keyframes rectangleMove
+  from
+    transform: perspective(800px) scale(1) translateX(0px)
+  to
+    transform: perspective(800px) scale(1.01) translateX(10px) 
+@keyframes rectangleMove2
+  from
+    transform: perspective(800px) scale(1) translateX(0px) 
+  to
+    transform: perspective(800px) scale(1.01) translateX(10px) 
